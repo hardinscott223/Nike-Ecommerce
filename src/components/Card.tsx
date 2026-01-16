@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { createPageUrl } from '@/utils';
+// import { createPageUrl } from '@/utils';
 
 /**
  * Reusable Product Card Component
@@ -27,11 +27,11 @@ export default function Card({
   currency = '$',
   href,
 }) {
-  const linkTo = href || createPageUrl(`Home?product=${id}`);
+  // const linkTo = href || createPageUrl(`Home?product=${id}`);
 
   return (
     <Link 
-      to={linkTo}
+      to={'/'}
       className="group block"
     >
       <div className="relative overflow-hidden bg-neutral-100 rounded-lg aspect-square mb-4">
