@@ -1,5 +1,10 @@
+'use client';
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Image from 'next/image';
+import "../app/globals.css";
+
 // import { createPageUrl } from '@/utils';
 
 /**
@@ -19,19 +24,19 @@ import { Link } from 'react-router-dom';
 export default function Card({
   id,
   image,
-  label,
+  // label,
   name,
   category,
   colorCount,
   price,
   currency = '$',
-  href,
+  // href,
 }) {
   // const linkTo = href || createPageUrl(`Home?product=${id}`);
 
   return (
     <Link 
-      to={'/'}
+      href={'/'}
       className="group block"
     >
       <div className="relative overflow-hidden bg-neutral-100 rounded-lg aspect-square mb-4">
@@ -63,11 +68,11 @@ export default function Card({
       {/* Product Info */}
       <div className="space-y-1">
         {/* Label */}
-        {label && (
+        {/* {label && (
           <p className="text-sm font-medium text-orange-600">
             {label}
           </p>
-        )}
+        )} */}
 
         {/* Product Name */}
         <h3 className="text-base font-medium text-neutral-900 group-hover:text-neutral-600 transition-colors">

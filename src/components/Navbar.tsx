@@ -1,15 +1,15 @@
 'use client'; 
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Search, Heart, ShoppingBag, Menu, X } from 'lucide-react';
 
 const navLinks = [
-  { label: 'New & Featured', href: 'Home' },
-  { label: 'Men', href: 'Home' },
-  { label: 'Women', href: 'Home' },
-  { label: 'Kids', href: 'Home' },
-  { label: 'Sale', href: 'Home' },
+  { label: 'New & Featured', href: '#' },
+  { label: 'Men', href: '#' },
+  { label: 'Women', href: '#' },
+  { label: 'Kids', href: '#' },
+  { label: 'Sale', href: '#' },
 ];
 
 export default function Navbar() {
@@ -41,7 +41,7 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to={createPageUrl('Home')} className="flex-shrink-0">
+          <Link href={'#'} className="flex-shrink-0">
             <svg className="w-16 h-16" viewBox="0 0 69 32" fill="currentColor">
               <path d="M68.56 4.06c-.89-.39-1.82-.59-2.73-.59-2.05 0-4.04.83-5.49 2.29l-20.1 20.16c-.32.32-.84.32-1.16 0L25.64 12.48c-1.45-1.46-3.43-2.29-5.48-2.29-.91 0-1.84.2-2.73.59-2.43 1.06-4.01 3.45-4.01 6.08v.09c0 2.11.83 4.1 2.32 5.59l17.67 17.71c.32.32.32.84 0 1.16L16.03 58.67c-1.49 1.49-2.32 3.48-2.32 5.59v.09c0 2.63 1.58 5.02 4.01 6.08.89.39 1.82.59 2.73.59 2.05 0 4.03-.83 5.48-2.29l27.63-27.69c.32-.32.84-.32 1.16 0l7.36 7.38c1.45 1.46 3.43 2.29 5.48 2.29.91 0 1.84-.2 2.73-.59 2.43-1.06 4.01-3.45 4.01-6.08v-.09c0-2.11-.83-4.1-2.32-5.59L54.31 20.65c-.32-.32-.32-.84 0-1.16l9.93-9.96c1.49-1.49 2.32-3.48 2.32-5.59v-.09c0-2.63-1.58-5.02-4.01-6.08z" transform="scale(0.4) translate(0, 10)"/>
               <path d="M66.96 4.15C59.96.96 39.96 13.28 24.96 27.28c-2 1.87-5.87 6.12-7.87 8.12 15-2 35.5-20.62 49.87-31.25z"/>
@@ -53,7 +53,7 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <Link
                 key={link.label}
-                to={createPageUrl(link.href)}
+                href={link.href}
                 className="text-base font-medium text-neutral-900 hover:text-neutral-500 transition-colors relative group"
               >
                 {link.label}
@@ -109,7 +109,7 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <Link
                 key={link.label}
-                to={createPageUrl(link.href)}
+                href={link.href}
                 className="block py-3 text-xl font-medium text-neutral-900 hover:text-neutral-500 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >

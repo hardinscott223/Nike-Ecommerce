@@ -2,6 +2,8 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Card from '../components/Card';
 import Footer from '../components/Footer';
+import Image from 'next/image';
+import "./globals.css";
 
 // Sample product data
 const products = [
@@ -124,9 +126,9 @@ export default function Home() {
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-          {/* {products.map((product) => (
+          {products.map((product) => (
             <Card key={product.id} {...product} />
-          ))} */}
+          ))}
         </div>
       </section>
 
